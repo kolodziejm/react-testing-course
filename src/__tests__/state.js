@@ -14,5 +14,5 @@ test('renders a number input with a label "Favorite Number"', () => {
   const input = getByLabelText(/favorite number/i)
   fireEvent.change(input, {target: {value: 10}}) // drugi argument to properties dla tego eventu
   const errMsg = getByTestId('error-message')
-  expect(errMsg).toHaveTextContent(/the number is invalid/i)
+  expect(errMsg).toBeInTheDocument()
 })
