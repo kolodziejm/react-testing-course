@@ -4,6 +4,7 @@ import {loadGreeting} from './api'
 class GreetingLoader extends Component {
   inputRef = React.createRef()
   state = {greeting: ''}
+  // submit method, fejkuje http request
   loadGreetingForInput = async e => {
     e.preventDefault()
     const {data} = await loadGreeting(this.inputRef.current.value)
